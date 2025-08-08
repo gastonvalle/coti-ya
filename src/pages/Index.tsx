@@ -18,18 +18,19 @@ const Index = () => {
                 <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold leading-tight tracking-tight font-display text-white mb-6 animate-fade-in">
                   Cotizaciones de transporte internacional,{" "}
                   <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                    más simples que nunca
+                    sin complicaciones
                   </span>
                 </h1>
                 
                 <p className="mt-6 text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                  Estamos diseñando una nueva plataforma para que importadores de Argentina reciban cotizaciones 
-                  <strong className="text-yellow-300"> rápidas, anónimas y comparables</strong> de múltiples forwarders.
+                  Ayudanos a validar una nueva forma de cotizar cargas internacionales:  
+                  <strong className="text-yellow-300"> simple, rápida y comparativa.</strong> 
                 </p>
-                
+                {/*
                 <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
                   Queremos tu opinión para que sea perfecta para vos.
                 </p>
+                */}
                 
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="lg" variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift text-lg px-8 py-4 h-auto">
@@ -37,15 +38,15 @@ const Index = () => {
                       Responder encuesta (2 minutos)
                       <ArrowRight className="h-5 w-5" />
                     </a>
-                  </Button>
-                  <div className="text-white/90 text-sm sm:text-base flex items-center gap-2">
-                    <Users className="h-4 w-4" />
-                    <span>+4.000 importadores participando</span>
-                  </div>
+                  </Button>                  
                 </div>
                 
                 <div className="mt-8 max-w-md mx-auto">
                   <div className="bg-success/20 backdrop-blur rounded-2xl p-4 border border-success/30">
+                    <div className="text-white/90 text-sm sm:text-base flex items-center gap-2">
+                    <Users className="h-4 w-4" />
+                    <span>+150 importadores ya participaron</span>
+                  </div>
                     <div className="flex items-center justify-center gap-3 text-white">
                       <CheckCircle2 className="h-5 w-5 text-green-300" />
                       <span className="font-semibold text-lg">3 meses gratis cuando lancemos</span>
