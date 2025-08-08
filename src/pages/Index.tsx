@@ -2,12 +2,10 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Palette, Clock, Rocket, Quote, CheckCircle2, ArrowRight, Users, Shield, Zap, TrendingUp, Star } from "lucide-react";
-
 const SURVEY_URL = "https://forms.gle/encuesta-cotiya"; // Reemplazar por el enlace real
 
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
 
       <main className="pt-20" id="hero">
@@ -72,16 +70,11 @@ const Index = () => {
         {/* Por qué participar */}
         <section id="por-que" aria-labelledby="why-heading" className="container mx-auto px-4 py-20 relative">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full bg-brand-light px-4 py-2 text-sm text-primary font-medium mb-4">
-              <TrendingUp className="h-4 w-4" />
-              Únete al movimiento
-            </div>
+            
             <h2 id="why-heading" className="text-4xl md:text-5xl font-bold font-display tracking-tight mb-4">
               ¿Por qué <span className="text-primary">participar?</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Tu aporte nos ayuda a construir la herramienta ideal para importadores argentinos.
-            </p>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Por ayudarnos a mejorar la solución te damos acceso gratis los primeros 3 meses</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
@@ -107,9 +100,7 @@ const Index = () => {
                 <CardTitle className="text-2xl font-bold">Acceso anticipado</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="text-base leading-relaxed">
-                  Recibí acceso exclusivo a la versión beta cuando lancemos y sé de los primeros en usar la plataforma.
-                </CardDescription>
+                <CardDescription className="text-base leading-relaxed">Recibí acceso exclusivo y gratis por 3 meses cuando lancemos la plataforma.</CardDescription>
               </CardContent>
             </Card>
 
@@ -121,9 +112,7 @@ const Index = () => {
                 <CardTitle className="text-2xl font-bold">Sin compromiso</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <CardDescription className="text-base leading-relaxed">
-                  Respondé en menos de 2 minutos. No pedimos datos comerciales sensibles ni información confidencial.
-                </CardDescription>
+                <CardDescription className="text-base leading-relaxed">Respondé en menos de 2 minutos. No pedimos datos comerciales sensibles.</CardDescription>
               </CardContent>
             </Card>
           </div>
@@ -154,54 +143,38 @@ const Index = () => {
             </div>
 
             <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
-              {[
-                {
-                  title: "Publicás tu solicitud",
-                  description: "Sin revelar tu identidad. Describí tu necesidad de transporte de forma anónima.",
-                  icon: "1",
-                  color: "primary"
-                },
-                {
-                  title: "Recibís cotizaciones",
-                  description: "De forwarders verificados. Múltiples ofertas estructuradas y comparables.",
-                  icon: "2", 
-                  color: "accent"
-                },
-                {
-                  title: "Elegís la mejor",
-                  description: "Según precio, tiempo y condiciones. Decidís con toda la información disponible.",
-                  icon: "3",
-                  color: "success"
-                }
-              ].map((step, idx) => (
-                <Card key={idx} className="relative overflow-hidden hover:shadow-elegant hover-lift transition-all border-none bg-white group">
-                  <div className={`absolute right-6 top-6 text-7xl font-bold opacity-10 ${
-                    step.color === 'primary' ? 'text-primary' :
-                    step.color === 'accent' ? 'text-accent' : 'text-success'
-                  }`}>
+              {[{
+              title: "Publicás tu solicitud",
+              description: "Sin revelar tu identidad. Describí tu necesidad de transporte de forma anónima.",
+              icon: "1",
+              color: "primary"
+            }, {
+              title: "Recibís cotizaciones",
+              description: "De forwarders verificados. Múltiples ofertas estructuradas y comparables.",
+              icon: "2",
+              color: "accent"
+            }, {
+              title: "Elegís la mejor",
+              description: "Según precio, tiempo y condiciones. Decidís con toda la información disponible.",
+              icon: "3",
+              color: "success"
+            }].map((step, idx) => <Card key={idx} className="relative overflow-hidden hover:shadow-elegant hover-lift transition-all border-none bg-white group">
+                  <div className={`absolute right-6 top-6 text-7xl font-bold opacity-10 ${step.color === 'primary' ? 'text-primary' : step.color === 'accent' ? 'text-accent' : 'text-success'}`}>
                     {step.icon}
                   </div>
                   <CardHeader className="pb-4">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mb-4 ${
-                      step.color === 'primary' ? 'bg-gradient-primary' :
-                      step.color === 'accent' ? 'bg-gradient-accent' : 'bg-success'
-                    }`}>
-                      {step.icon}
-                    </div>
+                    
                     <CardTitle className="text-2xl font-bold">{step.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base leading-relaxed">
+                    <CardDescription className="text-base leading-relaxed py-[6px]">
                       {step.description}
                     </CardDescription>
                   </CardContent>
-                  {idx < 2 && (
-                    <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
-                      <ArrowRight className="h-8 w-8 text-primary/30" />
-                    </div>
-                  )}
-                </Card>
-              ))}
+                  {idx < 2 && <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
+                      
+                    </div>}
+                </Card>)}
             </div>
             
             <div className="mt-12 text-center">
@@ -222,31 +195,22 @@ const Index = () => {
           </header>
 
           <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                quote:
-                  "Me encantaría no tener que pasar horas contactando proveedores, y que las cotizaciones lleguen estructuradas.",
-                author: "Importador de maquinaria, Buenos Aires",
-              },
-              {
-                quote:
-                  "Si las ofertas fueran comparables, decidir sería más rápido y transparente.",
-                author: "PyME textil, Córdoba",
-              },
-              {
-                quote:
-                  "Valoro el anonimato para evitar llamados innecesarios hasta elegir.",
-                author: "Importador de electrónica, Mendoza",
-              },
-            ].map((t, i) => (
-              <Card key={i} className="hover:shadow-elegant transition-shadow">
+            {[{
+            quote: "Me encantaría no tener que pasar horas contactando proveedores, y que las cotizaciones lleguen estructuradas.",
+            author: "Importador de maquinaria, Buenos Aires"
+          }, {
+            quote: "Si las ofertas fueran comparables, decidir sería más rápido y transparente.",
+            author: "PyME textil, Córdoba"
+          }, {
+            quote: "Valoro el anonimato para evitar llamados innecesarios hasta elegir.",
+            author: "Importador de electrónica, Mendoza"
+          }].map((t, i) => <Card key={i} className="hover:shadow-elegant transition-shadow">
                 <CardContent className="pt-6">
                   <Quote className="h-6 w-6 text-primary mb-3" aria-hidden="true" />
                   <p className="text-base">“{t.quote}”</p>
                   <p className="mt-3 text-sm text-muted-foreground">— {t.author}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -309,8 +273,6 @@ const Index = () => {
           <a href="mailto:hola@cotiya.com" className="text-sm text-primary hover:underline">Contacto: hola@cotiya.com</a>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

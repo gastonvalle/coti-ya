@@ -2,21 +2,17 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import CotiyaLogo from "@/components/CotiyaLogo";
-
 const surveyUrl = "https://forms.gle/encuesta-cotiya"; // Ejemplo: reemplazar por tu enlace real
 
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a
-    href={href}
-    className={cn(
-      "text-sm font-medium text-foreground/80 hover:text-foreground transition-colors",
-      "story-link"
-    )}
-  >
+const NavLink = ({
+  href,
+  children
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => <a href={href} className={cn("text-sm font-medium text-foreground/80 hover:text-foreground transition-colors", "story-link")}>
     {children}
-  </a>
-);
-
+  </a>;
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -25,15 +21,7 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  return (
-    <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-50 border-b transition-all",
-        scrolled ? "bg-background/85 backdrop-blur shadow-sm" : "bg-background/70 backdrop-blur"
-      )}
-      role="banner"
-    >
+  return <header className={cn("fixed top-0 inset-x-0 z-50 border-b transition-all", scrolled ? "bg-background/85 backdrop-blur shadow-sm" : "bg-background/70 backdrop-blur")} role="banner">
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
           <CotiyaLogo className="text-primary" size="md" />
@@ -47,7 +35,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
-            <a href="#encuesta" aria-label="Ir a encuesta">Solo 2 min</a>
+            
           </Button>
           <Button variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift">
             <a href={surveyUrl} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta">
@@ -56,6 +44,5 @@ export default function Navbar() {
           </Button>
         </div>
       </nav>
-    </header>
-  );
+    </header>;
 }
