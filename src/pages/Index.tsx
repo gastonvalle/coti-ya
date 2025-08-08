@@ -34,7 +34,7 @@ const Index = () => {
                 
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="lg" variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift text-lg px-8 py-4 h-auto">
-                    <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta" className="flex items-center gap-2">
+                    <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta (2 minutos)" className="flex items-center gap-2">
                       Responder encuesta
                       <ArrowRight className="h-5 w-5" />
                     </a>
@@ -191,11 +191,11 @@ const Index = () => {
             author: "Importador de maquinaria, Buenos Aires"
           }, {
             quote: "Si las ofertas fueran comparables, decidir sería más rápido y transparente.",
-            name: "Bruno Pugliese",
+            name: "Ana Rodriguez",
             author: "PyME textil, Córdoba"
           }, {
             quote: "Valoro el anonimato para evitar llamados innecesarios hasta elegir.",
-            name: "Bruno Pugliese",
+            name: "Pablo Crespo",
             author: "Importador de electrónica, Mendoza"
           }].map((t, i) => <Card key={i} className="hover:shadow-elegant transition-shadow">
                 <CardContent className="pt-6">
