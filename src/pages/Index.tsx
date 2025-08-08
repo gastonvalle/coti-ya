@@ -201,8 +201,8 @@ const Index = () => {
                 <CardContent className="pt-6">
                   <Quote className="h-6 w-6 text-primary mb-3" aria-hidden="true" />
                   <p className="text-base">“{t.quote}”</p>
-                  <p className="mt-3 text-sm text-muted-foreground">“{t.name}”</p>
-                  <p className="mt-3 text-sm text-muted-foreground">— {t.author}</p>
+                  <p className="mt-4 text-sm text-muted-foreground">— {t.name}</p>
+                  <p className="mt-3 text-sm text-muted-foreground">{t.author}</p>
                 </CardContent>
               </Card>)}
           </div>
