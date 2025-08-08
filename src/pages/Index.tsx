@@ -34,7 +34,7 @@ const Index = () => {
                 
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="lg" variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift text-lg px-8 py-4 h-auto">
-                    <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta (2 minutos)" className="flex items-center gap-2">
+                    <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta" className="flex items-center gap-2">
                       Responder encuesta
                       <ArrowRight className="h-5 w-5" />
                     </a>
@@ -57,10 +57,10 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Background decoration */}
+            {/* Background decoration 
             <div className="absolute inset-0 opacity-30">
               <div className="w-full h-full bg-white/5 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:40px_40px]"></div>
-            </div>
+            </div>*/}
           </div>
         </section>
 
