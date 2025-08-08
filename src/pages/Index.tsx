@@ -34,8 +34,8 @@ const Index = () => {
                 
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="lg" variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift text-lg px-8 py-4 h-auto">
-                    <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta (2 minutos)" className="flex items-center gap-2">
-                      Responder encuesta (2 minutos)
+                    <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta" className="flex items-center gap-2">
+                      Responder encuesta
                       <ArrowRight className="h-5 w-5" />
                     </a>
                   </Button>                  
@@ -44,8 +44,7 @@ const Index = () => {
                 <div className="mt-8 max-w-md mx-auto">
                   <div className="text-white/90 text-sm sm:text-base flex items-center gap-2">
                     <Users className="h-4 w-4" />
-                    <span>+150 importadores ya participaron</span>
-                    <span>+150 importadores ya participaron</span>
+                    <span>+150 importadores ya participaron</span>                    
                   </div>
                   <div className="bg-success/20 backdrop-blur rounded-2xl p-4 border border-success/30">
                     <div className="flex items-center justify-center gap-3 text-white">
