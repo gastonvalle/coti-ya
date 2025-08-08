@@ -105,8 +105,8 @@ const Index = () => {
 
             <Card className="hover:shadow-elegant hover-lift transition-all border-none bg-gradient-to-br from-white to-success/10 group">
               <CardHeader className="text-center pb-2">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-success flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Shield className="h-8 w-8 text-white" aria-hidden="true" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Shield className="h-8 w-8 text-blue" aria-hidden="true" />
                 </div>
                 <CardTitle className="text-2xl font-bold">Sin compromiso</CardTitle>
               </CardHeader>
