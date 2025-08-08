@@ -42,16 +42,17 @@ const Index = () => {
                 </div>
                 
                 <div className="mt-8 max-w-md mx-auto">
-                  <div className="text-white/90 text-sm sm:text-base flex items-center gap-2">
-                    <Users className="h-4 w-4" />
-                    <span>+150 importadores ya participaron</span>                    
-                  </div>
+                  
                   <div className="bg-success/20 backdrop-blur rounded-2xl p-4 border border-success/30">
                     <div className="flex items-center justify-center gap-3 text-white">
                       <CheckCircle2 className="h-5 w-5 text-green-300" />
                       <span className="font-semibold text-lg">3 meses gratis cuando lancemos</span>
                     </div>
                     <p className="text-white/80 text-sm mt-1">para quienes completen la encuesta</p>
+                  </div>
+                  <div className="text-white/90 text-sm sm:text-base flex items-center justify-center gap-2">
+                    <Users className="h-4 w-4" />
+                    <span>+150 importadores ya participaron</span>                    
                   </div>
                 </div>
               </div>
