@@ -32,7 +32,7 @@ const Index = () => {
                 </p>
                 */}
                 
-                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="mt-10 flex flex-col items-center justify-center gap-4">
                   <Button size="lg" variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift text-lg px-8 py-4 h-auto">
                     <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta" className="flex items-center gap-2">
                       Responder encuesta
