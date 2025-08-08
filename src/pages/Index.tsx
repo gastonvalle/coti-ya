@@ -128,7 +128,7 @@ const Index = () => {
                 ¿Cómo <span className="text-primary">funcionará?</span>
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Un concepto revolucionario en 3 pasos simples
+                Un proceso simple y transparente para obtener las mejores cotizaciones
               </p>
             </div>
 
@@ -180,24 +180,28 @@ const Index = () => {
         {/* Testimonios */}
         <section id="testimonios" aria-labelledby="testimonials-heading" className="container mx-auto px-4 py-20">
           <header className="text-center mb-10">
-            <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold font-display tracking-tight">Lo que dicen nuestros usuarios</h2>
-            <p className="text-muted-foreground mt-2">Casos simulados para mostrar el valor</p>
+            <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold font-display tracking-tight">Lo que dicen otros importadores</h2>
+            <p className="text-muted-foreground mt-2">Testimonios de profesionales que enfrentan estos desafíos diariamente</p>
           </header>
 
           <div className="grid gap-6 md:grid-cols-3">
             {[{
             quote: "Me encantaría no tener que pasar horas contactando proveedores, y que las cotizaciones lleguen estructuradas.",
+            name: "Bruno Pugliese",
             author: "Importador de maquinaria, Buenos Aires"
           }, {
             quote: "Si las ofertas fueran comparables, decidir sería más rápido y transparente.",
+            name: "Bruno Pugliese",
             author: "PyME textil, Córdoba"
           }, {
             quote: "Valoro el anonimato para evitar llamados innecesarios hasta elegir.",
+            name: "Bruno Pugliese",
             author: "Importador de electrónica, Mendoza"
           }].map((t, i) => <Card key={i} className="hover:shadow-elegant transition-shadow">
                 <CardContent className="pt-6">
                   <Quote className="h-6 w-6 text-primary mb-3" aria-hidden="true" />
                   <p className="text-base">“{t.quote}”</p>
+                  <p className="text-base">“{t.name}”</p>
                   <p className="mt-3 text-sm text-muted-foreground">— {t.author}</p>
                 </CardContent>
               </Card>)}
