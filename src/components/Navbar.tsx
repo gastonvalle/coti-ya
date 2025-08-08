@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
+import CotiyaLogo from "@/components/CotiyaLogo";
 
 const surveyUrl = "https://forms.gle/encuesta-cotiya"; // Ejemplo: reemplazar por tu enlace real
 
@@ -34,9 +35,8 @@ export default function Navbar() {
       role="banner"
     >
       <nav className="container mx-auto flex h-16 items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2" aria-label="CotiYa - Inicio">
-          <div className="h-8 w-8 rounded-md bg-gradient-primary shadow-elegant" />
-          <span className="text-lg font-semibold">CotiYa</span>
+        <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
+          <CotiyaLogo className="text-primary" size="md" />
         </a>
 
         <div className="hidden md:flex items-center gap-6">
@@ -46,12 +46,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button asChild variant="link" className="hidden sm:inline-flex">
-            <a href="#encuesta" aria-label="Ir a encuesta">2 min</a>
+          <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
+            <a href="#encuesta" aria-label="Ir a encuesta">Solo 2 min</a>
           </Button>
-          <Button variant="accent" asChild>
+          <Button variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift">
             <a href={surveyUrl} target="_blank" rel="noopener noreferrer" aria-label="Responder encuesta">
-              Responder encuesta
+              Participar
             </a>
           </Button>
         </div>
