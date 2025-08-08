@@ -38,7 +38,11 @@ const Index = () => {
                       Responder encuesta
                       <ArrowRight className="h-5 w-5" />
                     </a>
-                  </Button>                  
+                  </Button>  
+                  <div className="text-white/90 text-sm sm:text-base flex items-center justify-center gap-2">
+                    <Users className="h-4 w-4" />
+                    <span>+150 importadores ya participaron</span>                    
+                  </div>                
                 </div>
                 
                 <div className="mt-8 max-w-md mx-auto">
@@ -50,10 +54,7 @@ const Index = () => {
                     </div>
                     <p className="text-white/80 text-sm mt-1">para quienes completen la encuesta</p>
                   </div>
-                  <div className="text-white/90 text-sm sm:text-base flex items-center justify-center gap-2">
-                    <Users className="h-4 w-4" />
-                    <span>+150 importadores ya participaron</span>                    
-                  </div>
+                  
                 </div>
               </div>
             </div>
