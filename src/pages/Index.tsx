@@ -112,15 +112,8 @@ const Index = () => {
                 <CardDescription className="text-base leading-relaxed">Respondé en menos de 2 minutos. No pedimos datos comerciales sensibles.</CardDescription>
               </CardContent>
             </Card>
-          </div>
+          </div>         
           
-          <div className="text-center mt-12">
-            <Button size="lg" variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-white">
-              <a href="#como" aria-label="Ver cómo funciona">
-                Ver cómo funcionará <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-          </div>
         </section>
 
         {/* Cómo funciona */}
