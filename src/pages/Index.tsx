@@ -117,6 +117,7 @@ const Index = () => {
                 </Card>)}
             </div>
             
+            <div className="mt-12 text-center">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
                   <Button size="lg" variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift text-xl px-10 py-5 h-auto shadow-2xl">
                     <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Quiero participar ahora" className="flex items-center gap-3">
@@ -124,6 +125,7 @@ const Index = () => {
                       <ArrowRight className="h-6 w-6" />
                     </a>
                   </Button>
+            </div>
             </div>
             {/*<div className="mt-12 text-center">
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-2xl mx-auto">
