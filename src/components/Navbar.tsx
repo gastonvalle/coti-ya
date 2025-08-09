@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
@@ -24,7 +26,13 @@ export default function Navbar() {
   return <header className={cn("fixed top-0 inset-x-0 z-50 border-b transition-all", scrolled ? "bg-background/85 backdrop-blur shadow-sm" : "bg-background/70 backdrop-blur")} role="banner">
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
-          <CotiyaLogo className="text-primary" size="md" />
+          <Image
+          src="/logo.svg"      // coloca logo.svg en /public
+          alt="CotiYa"
+          width={120}          // ajusta según lo necesites
+          height={40}
+          priority
+        />
         </a>
 
         <div className="hidden md:flex items-center gap-6">
