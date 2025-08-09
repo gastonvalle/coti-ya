@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Palette, Clock, Rocket, Quote, CheckCircle2, ArrowRight, Users, Shield, Zap, TrendingUp, Star } from "lucide-react";
-const SURVEY_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd8WGzN2_9s5Rci2tnaH6sP7ULOKo1SNl-rbTohsC0NDzklBA/viewform?usp=header"; // Reemplazar por el enlace real
+const SURVEY_URL = "https://us7.list-manage.com/survey?u=c4c63072e0be1e96b11cd5f3f&id=256e14f558&attribution=false"; 
 
 const Index = () => {
   return <div className="min-h-screen bg-background">
@@ -66,6 +66,75 @@ const Index = () => {
           </div>
         </section>
 
+{/* Cómo funciona */}
+        <section id="como" aria-labelledby="how-heading" className="bg-secondary/30 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm text-primary font-medium mb-4">
+                <Zap className="h-4 w-4" />
+                Simple y eficiente
+              </div>
+              <h2 id="how-heading" className="text-4xl md:text-5xl font-bold font-display tracking-tight mb-4">
+                ¿Cómo <span className="text-primary">funcionará?</span>
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Un proceso simple y transparente para obtener las mejores cotizaciones
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+              {[{
+              title: "Publicás tu solicitud",
+              description: "Sin revelar tu identidad. Describí tu necesidad de transporte de forma anónima.",
+              icon: "1",
+              color: "primary"
+            }, {
+              title: "Recibís cotizaciones",
+              description: "De forwarders verificados. Múltiples ofertas estructuradas y comparables.",
+              icon: "2",
+              color: "accent"
+            }, {
+              title: "Elegís la mejor",
+              description: "Según precio, tiempo y condiciones. Decidís con toda la información disponible.",
+              icon: "3",
+              color: "success"
+            }].map((step, idx) => <Card key={idx} className="relative overflow-hidden hover:shadow-elegant hover-lift transition-all border-none bg-white group">
+                  <div className={`absolute right-6 top-6 text-7xl font-bold opacity-10 ${step.color === 'primary' ? 'text-primary' : step.color === 'accent' ? 'text-accent' : 'text-success'}`}>
+                    {step.icon}
+                  </div>
+                  <CardHeader className="pb-4">
+                    
+                    <CardTitle className="text-2xl font-bold">{step.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base leading-relaxed py-[6px]">
+                      {step.description}
+                    </CardDescription>
+                  </CardContent>
+                  {idx < 2 && <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
+                      
+                    </div>}
+                </Card>)}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+                  <Button size="lg" variant="accent" asChild className="bg-gradient-accent hover:shadow-cta hover-lift text-xl px-10 py-5 h-auto shadow-2xl">
+                    <a href={SURVEY_URL} target="_blank" rel="noopener noreferrer" aria-label="Quiero participar ahora" className="flex items-center gap-3">
+                      Quiero participar ahora
+                      <ArrowRight className="h-6 w-6" />
+                    </a>
+                  </Button>
+            </div>
+            {/*<div className="mt-12 text-center">
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-2xl mx-auto">
+                <p className="text-sm text-amber-800">
+                  <strong>Nota:</strong> Esto describe el concepto para entender lo que estamos validando, no la funcionalidad actual.
+                </p>
+              </div>
+            </div>*/}
+          </div>
+        </section>
+
         {/* Por qué participar */}
         <section id="por-que" aria-labelledby="why-heading" className="container mx-auto px-4 py-20 relative">
           <div className="text-center mb-16">
@@ -118,67 +187,7 @@ const Index = () => {
           
         </section>
 
-        {/* Cómo funciona */}
-        <section id="como" aria-labelledby="how-heading" className="bg-secondary/30 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm text-primary font-medium mb-4">
-                <Zap className="h-4 w-4" />
-                Simple y eficiente
-              </div>
-              <h2 id="how-heading" className="text-4xl md:text-5xl font-bold font-display tracking-tight mb-4">
-                ¿Cómo <span className="text-primary">funcionará?</span>
-              </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Un proceso simple y transparente para obtener las mejores cotizaciones
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
-              {[{
-              title: "Publicás tu solicitud",
-              description: "Sin revelar tu identidad. Describí tu necesidad de transporte de forma anónima.",
-              icon: "1",
-              color: "primary"
-            }, {
-              title: "Recibís cotizaciones",
-              description: "De forwarders verificados. Múltiples ofertas estructuradas y comparables.",
-              icon: "2",
-              color: "accent"
-            }, {
-              title: "Elegís la mejor",
-              description: "Según precio, tiempo y condiciones. Decidís con toda la información disponible.",
-              icon: "3",
-              color: "success"
-            }].map((step, idx) => <Card key={idx} className="relative overflow-hidden hover:shadow-elegant hover-lift transition-all border-none bg-white group">
-                  <div className={`absolute right-6 top-6 text-7xl font-bold opacity-10 ${step.color === 'primary' ? 'text-primary' : step.color === 'accent' ? 'text-accent' : 'text-success'}`}>
-                    {step.icon}
-                  </div>
-                  <CardHeader className="pb-4">
-                    
-                    <CardTitle className="text-2xl font-bold">{step.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base leading-relaxed py-[6px]">
-                      {step.description}
-                    </CardDescription>
-                  </CardContent>
-                  {idx < 2 && <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
-                      
-                    </div>}
-                </Card>)}
-            </div>
-            
-            <div className="mt-12 text-center">
-              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-2xl mx-auto">
-                <p className="text-sm text-amber-800">
-                  <strong>Nota:</strong> Esto describe el concepto para entender lo que estamos validando, no la funcionalidad actual.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        
         {/* Testimonios */}
         <section id="testimonios" aria-labelledby="testimonials-heading" className="container mx-auto px-4 py-20">
           <header className="text-center mb-10">
@@ -247,7 +256,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Users className="h-5 w-5 text-blue-300" />
-                    <span>+4.000 participantes</span>
+                    <span>+150 participantes</span>
                   </div>
                 </div>
               </div>

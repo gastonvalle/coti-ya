@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import CotiyaLogo from "@/components/CotiyaLogo";
-const surveyUrl = "https://docs.google.com/forms/d/e/1FAIpQLSd8WGzN2_9s5Rci2tnaH6sP7ULOKo1SNl-rbTohsC0NDzklBA/viewform"; // Ejemplo: reemplazar por tu enlace real
+const surveyUrl = "https://us7.list-manage.com/survey?u=c4c63072e0be1e96b11cd5f3f&id=256e14f558&attribution=false";
 
 const NavLink = ({
   href,
