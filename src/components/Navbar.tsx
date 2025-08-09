@@ -26,7 +26,7 @@ export default function Navbar() {
         <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
           <img          src="/CotiYaH.svg"      
           alt="CotiYa"
-          width={120}          // ajusta según lo necesites
+          width={100}          // ajusta según lo necesites
           height={40}
           className="h-10 w-auto"
         />
