@@ -24,7 +24,7 @@ export default function Navbar() {
   return <header className={cn("fixed top-0 inset-x-0 z-50 border-b transition-all", scrolled ? "bg-background/85 backdrop-blur shadow-sm" : "bg-background/70 backdrop-blur")} role="banner">
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
-          <img          src="/CotiYaH.svg"      
+          <img          src="/CotiYa Azul.svg"      
           alt="CotiYa"
           width="100"          // ajusta según lo necesites
           height="40"
