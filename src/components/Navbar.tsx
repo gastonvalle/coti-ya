@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
-import CotiyaLogo from "@/components/CotiyaLogo";
+
 const surveyUrl = "https://us7.list-manage.com/survey?u=c4c63072e0be1e96b11cd5f3f&id=256e14f558&attribution=false";
 
 const NavLink = ({
@@ -24,12 +24,11 @@ export default function Navbar() {
   return <header className={cn("fixed top-0 inset-x-0 z-50 border-b transition-all", scrolled ? "bg-background/85 backdrop-blur shadow-sm" : "bg-background/70 backdrop-blur")} role="banner">
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
-          <Image
-          src="/CotiYa.svg"      
+          <img          src="/CotiYa.svg"      
           alt="CotiYa"
           width={120}          // ajusta según lo necesites
           height={40}
-          priority
+          className="h-10 w-auto"
         />
         </a>
 
