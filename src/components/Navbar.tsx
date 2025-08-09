@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
           <Image
-          src="/logo.svg"      // coloca logo.svg en /public
+          src="/CotiYa.svg"      
           alt="CotiYa"
           width={120}          // ajusta según lo necesites
           height={40}
