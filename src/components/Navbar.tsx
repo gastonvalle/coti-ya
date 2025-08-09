@@ -24,12 +24,13 @@ export default function Navbar() {
   return <header className={cn("fixed top-0 inset-x-0 z-50 border-b transition-all", scrolled ? "bg-background/85 backdrop-blur shadow-sm" : "bg-background/70 backdrop-blur")} role="banner">
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <a href="#hero" className="flex items-center" aria-label="CotiYa - Inicio">
-          <img          src="/CotiYa Azul.svg"      
-          alt="CotiYa"
-          width="100"          // ajusta según lo necesites
-          height="40"
-          className="h-10 w-auto"
-        />
+          <img 
+            src="/CotiYa%20Azul.svg"      
+            alt="CotiYa"
+            width="100"
+            height="40"
+            className="h-10 w-auto"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-6">
